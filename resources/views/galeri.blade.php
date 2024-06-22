@@ -1,0 +1,5 @@
+@include('front.header')
+@include('front.topnav')
+@include('front.mainnav')
+@include('front.galeri')
+@include('front.footer')

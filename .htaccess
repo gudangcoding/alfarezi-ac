@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Handle MIME type for JavaScript files
+    <FilesMatch "\.(js)$">
+        ForceType 'text/javascript'
+    </FilesMatch>
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

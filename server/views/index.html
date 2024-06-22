@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WhatsApp QR Code</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io();
+            socket.on("qr", function (data) {
+                $("#qrCodeContainer").html(
+                    `<img src="${data.qrcode}" alt="QR Code">`
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <h1>WhatsApp QR Code</h1>
+        <form action="/login" method="POST">
+            <label for="whatsappNumber">WhatsApp Number:</label>
+            <input
+                type="text"
+                id="whatsappNumber"
+                name="whatsappNumber"
+                required
+            />
+            <button type="submit">Login</button>
+        </form>
+        <div id="qrCodeContainer">
+            <!-- Container untuk menampilkan QR code -->
+        </div>
+    </body>
+</html>

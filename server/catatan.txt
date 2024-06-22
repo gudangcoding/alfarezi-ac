@@ -1,0 +1,6 @@
+1. npm init -y
+2. buat file index.js
+3. install
+4. npm i @whiskeysockets/baileys axios body-parser cron dotenv express express-validator fs mysql2 ejs sequelize nodemon qrcode qrcode-terminal request socket.io
+5. copy kode dari @whiskeysockets/baileys pada judul "Connecting multi device (recommended)"
+6. copy kode untuk simpan session ke file pada judul "Saving & Restoring Sessions"
